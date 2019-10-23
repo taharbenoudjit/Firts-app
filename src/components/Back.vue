@@ -1,4 +1,6 @@
 <template>
+
+  <div id='Back'>
  
     <v-img  
       src='@/pic/front.jpeg' >
@@ -17,10 +19,11 @@
             font-weight-bold
             text-center
             black--text" >feeling hungry?!</v-card-text>
-          <v-btn class='mb-4 green lighten-3' block _>Let's order</v-btn>
+          <v-btn class='mb-4 green lighten-3' block replace :to="{name: 'menuBack'}">Let's order</v-btn>
+
         </v-card>
       </v-container>
     </v-img>
-    
+  </div>  
 </template>
 
