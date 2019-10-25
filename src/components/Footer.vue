@@ -2,13 +2,13 @@
   
     <v-footer
       
-      class="green lighten-3 "
+      class="grey darken-3"
     >
       <v-card
         flat
         tile
         width="100%"
-        class="green lighten-3 text-center"
+        class="grey darken-3 text-center"
       >
         <v-card-text >
             <v-btn
@@ -17,7 +17,7 @@
               class="mx-4"
               icon
             >
-              <v-icon size="24px">{{ icon }}</v-icon>
+              <v-icon color='red darken-1' size="24px">{{ icon }}</v-icon>
             </v-btn>
         </v-card-text>
         </v-card>

@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Back from '@/components/Back'
 import menuBack from '@/components/menuBack'
 import login from '@/components/login'
+import end from '@/components/end'
 
 Vue.use(Router)
 
@@ -22,6 +23,12 @@ export default new Router({
       path: '/login',
       name: 'login',
       component: login
+    },
+
+    {
+      path: '/end',
+      name: 'end' ,
+      component: end,
     }
 
   ]
