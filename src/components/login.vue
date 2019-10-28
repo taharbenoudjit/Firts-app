@@ -1,70 +1,59 @@
 <template>
-  <v-container>
-    <v-layout text-center wrap>
-      <v-form v-model="valid">
-        <v-container>
-          <v-row>
-            <v-col cols="12" md="4">
-              <v-text-field v-model="name" label="Name" required></v-text-field>
-            </v-col>
-
-            <v-col cols="12" md="4">
-              <v-text-field v-model="description" label="Description" required></v-text-field>
-            </v-col>
-          </v-row>
-          <v-btn @click="addElement">Ajouter</v-btn>
-          <v-btn @click="login">Connexion</v-btn>
-        </v-container>
+  
+    
+  <v-img src='@/pic/frontBack.jpeg' >
+    <v-flex row class='justify-end'>
+      
+      <v-card  class="transparent mt-12 pa-12 " height='400px'>
+        <v-card-text class='text-center ma-3 pa-4'> 
+         <v-form v-model="valid" >
+          <v-text-field v-model="name" label="Nom d'utilisateur" required></v-text-field>
+         </v-form >
+        </v-card-text>
+        <v-card-text class=" pa-5 text-center " >
+          <v-form v-model="valid">
+        <v-text-field v-model="password" label="Mot de Passe" required></v-text-field>
       </v-form>
-      <v-card class="mx-auto" max-width="400" tile>
-        <v-list-item v-for="(item, index) in todos" v-bind:key="item.id">
-          <v-list-item-content>
-            <v-list-item-title>
-              {{ item.name }}
-            </v-list-item-title>
-            <v-list-item-subtitle>
-              {{ item.description }}
-              <v-btn @click="rmElement(index)">Remove</v-btn>
-            </v-list-item-subtitle>
-          </v-list-item-content>
-        </v-list-item>
+        </v-card-text>
+        <v-btn class='mb-4 red darken-1' block  @click="login">Conexion</v-btn>
       </v-card>
-    </v-layout>
-  </v-container>
+      
+    </v-flex>
+  </v-img>
 </template>
+   
 
 <script>
 export default {
   data: () => ({
     valid: false,
     name: '',
-    description: '',
-    todos: [],
-    url: '' // 'http://localhost:4000'
+    password: '',
+   
+    url: 'http://localhost:4000'
   }),
   methods: {
     async login () {
-      // connecter l'utilisateur
-      const response = await this.axios.post(this.url + '/api/login', {
-        login: 'admin',
-        password: 'changethispassword'
+      
+      var self = this
+      axios.post('/api/login', {
+         login: this.name,
+        password: this.password
+      }).then(function (response) {
+        console.log(response)
+      }).catch(function (error) {
+        console.log(error)
       })
+      const response = await axios.post(this.url + '/api/login', {
+        login: this.name,
+        password: this.password
+      })
+      console.log(response)
       console.log('response is:', response)
     },
     logout () {
     },
-    addElement () {
-      this.todos.push({
-        id: this.todos.length,
-        name: this.name,
-        description: this.description
-      })
-      console.log('ajouté !')
-    },
-    rmElement (index) {
-      console.log('index', index)
-      this.todos.splice(index, 1)
-    }
+    
   }
 }
 </script>

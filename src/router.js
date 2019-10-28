@@ -27,8 +27,8 @@ export default new Router({
 
     {
       path: '/end',
-      name: 'end' ,
-      component: end,
+      name: 'end',
+      component: end
     }
 
   ]

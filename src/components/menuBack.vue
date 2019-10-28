@@ -174,7 +174,7 @@
             <v-card class='ma-5'>
                 <v-card-title>Facture</v-card-title>
                 <divider insert></divider>
-                <v-card-text>total here</v-card-text>
+                <v-card>total here</v-card>
             </v-card>
          </v-layout>
       </v-flex>
@@ -191,7 +191,7 @@
                
                 Signatures:[
                     { name:'Chévre Miel', 
-                    description:'Chevrotin , miel, noix , Crème fraiche, olive noire , Figue' , 
+                    description:'Chevrotin , miel , noix , Crème fraiche , olive noire , Figue' , 
                     price:'6.99 €',
                     img:'https://fac.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Ffac.2F2018.2F07.2F30.2F74dd970b-6145-4021-ac64-f93479da3800.2Ejpeg/748x372/quality/80/crop-from/center/pizza-blanche-chevre-miel-et-creme-fraiche.jpeg' },
                     { name:'Salade Pizza' , 
