@@ -1,9 +1,6 @@
 <template>
   
-    <v-footer
-      
-      class="grey darken-3"
-    >
+    <v-footer class="grey darken-3">
       <v-card flat tile width="100%" class="grey darken-3 text-center">
       <v-card-title><h2 id='title'>ABOUT US</h2></v-card-title>
         <v-divider color='white'></v-divider>
