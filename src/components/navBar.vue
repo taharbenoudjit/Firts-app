@@ -10,6 +10,7 @@
       <v-spacer></v-spacer>
       <v-btn class='mx-2' text color='red red darken-1' rounded  replace :to="{name: 'menuBack'}">Menu</v-btn>
       <v-btn text rounded color='red darken-1' replace :to="{name: 'login'}">login</v-btn>
+       <v-btn text rounded color='red darken-1' replace :to="{name:'signIn'}">Sign in</v-btn>
       <v-btn color='red darken-1'  icon>
           <v-icon dark >mdi-login-variant</v-icon>
         </v-btn>

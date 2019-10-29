@@ -4,6 +4,7 @@ import Back from '@/components/Back'
 import menuBack from '@/components/menuBack'
 import login from '@/components/login'
 import end from '@/components/end'
+import signIn from '@/components/signIn'
 
 Vue.use(Router)
 
@@ -29,6 +30,12 @@ export default new Router({
       path: '/end',
       name: 'end',
       component: end
+    },
+
+    {
+      path: '/signIn',
+      name: 'signIn',
+      component: signIn
     }
 
   ]

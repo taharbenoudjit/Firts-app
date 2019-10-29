@@ -10,10 +10,10 @@
         </v-card-text>
         <v-card-text class=" pa-5 text-center " >
           <v-form v-model="valid">
-        <v-text-field  v-model="password" label="Mot de Passe" type='password' required></v-text-field>
+        <v-text-field v-model="password" label="Mot de Passe" type='password' required></v-text-field>
       </v-form>
         </v-card-text>
-        <v-btn class='mb-4 red darken-1' block dark @click="login">Conexion</v-btn>
+        <v-btn class='mb-4 red darken-1' block dark @click="login">Ajouter</v-btn>
       </v-card>
       
     </v-flex>
@@ -35,7 +35,7 @@ export default {
   methods: {
     async login () {
       
-      this.axios.post(this.url + '/api/login', {
+      this.axios.post(this.url + '/api/signIn', {
          login: this.name,
         password: this.password
       }).then(function (response) {
@@ -55,5 +55,4 @@ export default {
 <style>
   .v-label.theme--light{ color: white !important; }
   .model{color: white;}
-  
 </style>
